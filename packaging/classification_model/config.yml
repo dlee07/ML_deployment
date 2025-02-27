@@ -1,0 +1,36 @@
+package_name: classification_model
+
+raw_data_file: titanic.csv
+
+target: survived
+
+pipeline_name: titanic_classification_model
+pipeline_save_file: titanic_classification_model_output_v
+
+features:
+- pclass
+- sex
+- age
+- sibsp
+- parch
+- fare
+- cabin
+- embarked
+- title
+
+test_size: 0.1
+
+random_state: 0
+
+numerical_vars:
+- age
+- fare
+
+categorical_vars:
+- sex
+- cabin
+- embarked
+- title
+
+cabin_vars:
+- cabin
